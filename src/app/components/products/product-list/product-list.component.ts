@@ -26,11 +26,11 @@ export class ProductListComponent implements OnInit {
     return this.productService.getProducts()
       .snapshotChanges().subscribe(item => {
         this.productList = [];
-        item.forEach(element => {
-          let x = element.payload.toJSON();
-          x["$key"] = element.key;
-          this.productList.push(x as Product);
-        });
+        // item.forEach(element => {
+        //   let x = element.payload.toJSON();
+        //   x["$key"] = element.key;
+        //   this.productList.push(x as Product);
+        // });
       });
   }
 
